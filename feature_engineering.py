@@ -38,3 +38,14 @@ pipeline.fit(texts, labels)
 # Test it
 print(pipeline.predict(["A wonderful and emotional performance."]))  # Expected: [1]
 print(pipeline.predict(["Terrible plot and bad acting."]))           # Expected: [0]
+
+
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+docs = ["The dog barked.", "The cat sat on the mat.", "The cat sat on the bed."]
+vectorizer = TfidfVectorizer()
+X = vectorizer.fit_transform(docs)
+
+print(vectorizer.get_feature_names_out())
+print(X.toarray())
