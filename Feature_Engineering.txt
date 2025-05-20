@@ -1,0 +1,55 @@
+🔧 Feature Engineering = What you do
+It’s about designing the right features for the model to learn from.
+
+In NLP:
+
+Cleaning the text
+
+Removing stop words
+
+Tokenizing
+
+Lemmatizing/stemming
+
+Converting words to vectors (TF-IDF, word2vec, BERT, etc.)
+
+Maybe even counting things like “number of exclamation marks”
+
+🧠 Goal:
+
+Turn raw text into meaningful signals that the model can learn patterns from.
+
+⚙️ Pipeline = How you organize the steps
+It’s the workflow you build to apply all those preprocessing steps in sequence.
+
+Think of a pipeline as the recipe that runs:
+
+python
+Copy
+Edit
+text → lowercase → remove punctuation → tokenize → remove stopwords → stem/lemmatize
+🧠 Goal:
+
+Ensure consistency, modularity, and reusability of preprocessing logic.
+
+🧩 Analogy:
+Imagine building a factory:
+
+🧠 Feature Engineering = Designing the tools and machines (e.g., deciding to filter out stop words or normalize text).
+
+🏭 Pipeline = The conveyor belt system where each machine does its job in sequence.
+
+You could:
+
+Have bad features in a great pipeline (and the model won't learn well)
+
+Or great features with no pipeline (and you can't reuse or scale your code)
+
+✅ So why are they separate teaching points?
+Concept	Why it's taught separately
+Feature Engineering	Focuses on what makes a good input to ML models
+Pipeline Building	Focuses on structuring and automating the flow
+
+But yes — in most projects, pipelines implement feature engineering steps.
+
+

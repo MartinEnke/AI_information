@@ -1,0 +1,67 @@
+🧠 What does RAG retrieve from?
+Yes — RAG retrieves content from a knowledge base, which can be:
+
+✅ 1. Local vector database (most common)
+Think of this as a smart, searchable database of documents.
+
+You preprocess your content (e.g. PDFs, FAQs, articles)
+
+Convert text chunks into embeddings (numerical vectors)
+
+Store those in a vector DB like:
+
+FAISS, Chroma, Weaviate, Pinecone, etc.
+
+🟢 When a user asks something, the system:
+
+Converts the question to a vector
+
+Retrieves top-N relevant chunks
+
+Sends those + the question to the LLM to generate a grounded answer
+
+🔁 Works offline, fast, and customizable.
+
+🌐 2. Web-based retrieval (less common, but powerful)
+Involves a live search query to the web or a private site.
+
+Uses tools like Bing Search API, SerpAPI, or custom scrapers
+
+Extracts relevant pages, chunks them, and feeds them to the LLM
+
+🟡 Benefits:
+
+Always up-to-date (great for news, weather, stock info)
+
+Broad coverage
+
+🔴 Challenges:
+
+Slower (due to web latency)
+
+Harder to control accuracy/reliability
+
+Needs careful prompt + filtering to avoid hallucination
+
+📊 So which is more common?
+Approach	Use Case	Common?
+🔒 Local Vector DB	Internal tools, chatbots, document Q&A	✅ Very common
+🌐 Web Search	Open-ended assistants, live agents	⚠️ Less common (more complex)
+
+Most enterprise or educational RAG apps use local vector DBs because they are:
+
+Private
+
+Fast
+
+Easier to control
+
+Don't rely on internet access
+
+🧪 Example use cases:
+Use Case	Source Type
+Chat with your PDFs	✅ Local DB (e.g., PDF chunks in Chroma)
+Medical assistant for clinics	✅ Local DB (medical docs, handbooks)
+Stock market assistant	🌐 Web (scraped news + APIs)
+Tech support bot	✅ Local DB (FAQs, manuals)
+AI-powered research buddy	🌐 Web + local hybrid
