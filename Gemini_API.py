@@ -1,3 +1,14 @@
+'''''''''
+Explanation:
+Configuration: You set the API key using genai.configure(...). To get an API key go to https://ai.google.dev/gemini-api/docs/api-key.
+Select a Model: “gemini-2.0-flash-exp” is provided as the generative model.
+User Prompt: A single question (“What is GenAI?”) is passed to the model.
+Response: The model returns generated text based on its trained knowledge.
+Exercise:
+Change the prompt to something else, like “Explain the basics of data structures in Python.”
+Modify the model name to another version to see if you get different responses.
+'''
+
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
